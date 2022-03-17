@@ -13,5 +13,3 @@ RUN dnf -y install appstream gcc gettext git glib2-devel gnome-shell \
 # Install eslint
 RUN npm install -g eslint
 
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
