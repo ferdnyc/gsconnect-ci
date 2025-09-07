@@ -23,6 +23,7 @@ RUN dnf --setopt install_weak_deps=false -y install \
         openssl \
         python3 \
         python3-pip \
+        ruff \
         xorg-x11-server-Xvfb \
         zip && \
     dnf clean all && \
@@ -32,5 +33,3 @@ RUN dnf --setopt install_weak_deps=false -y install \
 RUN npm install -g eslint globals @eslint/js @eslint/eslintrc && \
     npm cache clean --force
 
-# Install Python linting tools
-RUN python3 -m pip --no-cache-dir --no-input install black flake8
